@@ -2,7 +2,12 @@
 //computerChoice randomly return either ‘Rock’, ‘Paper’ or ‘Scissors’.
 function getComputerChoice() {
     //    math.random(1,3)
-    return prompt("computer");
+    let numb = Math.floor(Math.random() * 3);
+    return numb === 1 ? "rock" 
+    : numb === 2 ? "paper"
+    :"scissor";
+
+    // return prompt("computer");
 
 }
 // play return a winner of the round
@@ -32,11 +37,11 @@ function playRound(playerSelection, computerSelection) {
 
 // get player choice
 let playerSelection = prompt("enter player choice").toLowerCase();
-
+console.log("playerSelection: ", playerSelection)
 // get computer choice
 const computerSelection = getComputerChoice();
-
-console.log(playRound(playerSelection, computerSelection));
+console.log("computerSelection", computerSelection);
+// console.log(playRound(playerSelection, computerSelection));
 
 function game() {
     let playerScore = 0;
@@ -44,7 +49,7 @@ function game() {
     let result ;
    
     for (let i = 0; i < 5; i++) {
-        result = playRound();
+        result = playRound(playerSelection, computerSelection);
         if (result === "computerSelection") {
             computerScore++;
         }else if (result === "playerSelection") {
@@ -59,7 +64,7 @@ function game() {
 
 }
 
-
+game()
 // get only allowed choice
 // const playerSelection = "";
 // function playerChoice() {
