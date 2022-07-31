@@ -36,12 +36,20 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
+
 // get player choice
-let playerSelection = prompt("enter player choice").toLowerCase();
+// let playerSelection = prompt("enter player choice").toLowerCase();
+
+do {
+    var playerSelection = prompt("playerChoice");
+}while (notAllowed(playerSelection))
+// notAllowed(playerSelection)
 console.log("playerSelection: ", playerSelection)
+
 // get computer choice
 const computerSelection = getComputerChoice();
 console.log("computerSelection", computerSelection);
+
 // console.log(playRound(playerSelection, computerSelection));
 
 function game() {
@@ -66,21 +74,18 @@ function game() {
 }
 
 game()
-// get only allowed choice
-// const playerSelection = "";
-// function playerChoice() {
-    
-//     while (true) {
-//         if (playerSelection === "rock" || playerSelection === "paper" || playerSelection === "scissor") {
-//             return playerSelection;
-            
-//             break;
-//         }else {
-//         console.log("playerSelection =", playerSelection, typeof playerSelection);
-            
-//         }
-
-//     }
-
-
-// } 
+function notAllowed(playerSelection){
+    switch (playerSelection) {
+        case "rock":
+            return false
+            break; 
+        case "paper":
+            return false
+            break;     
+        case "scissor":
+            return false
+            break; 
+        default:
+           return true; 
+    }
+}
