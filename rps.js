@@ -6,12 +6,13 @@ function getComputerChoice() {
 
 }
 
-// return a winner of the round
+// play return a winner of the round
 function playRound (playerSelection, computerSelection) {
-    const playerSelection = toLowerCase(playerSelection);  
     return String("You Lose! Paper beats Rock");
 }
 
+const playerSelection = prompt("enter player choice").toLowerCase();  
+const computerSelection = getComputerChoice()
 
 
 
