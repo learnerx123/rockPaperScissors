@@ -2,11 +2,12 @@
 //computerChoice randomly return either ‘Rock’, ‘Paper’ or ‘Scissors’.
 function getComputerChoice() {
     //    math.random(1,3)
-    let numb = Math.floor(Math.random() * 3);
+    let numb = Math.floor(Math.random() * (4 - 1) + 1);
+    console.log(numb) 
+
     return numb === 1 ? "rock" 
     : numb === 2 ? "paper"
     :"scissor";
-
     // return prompt("computer");
 
 }
