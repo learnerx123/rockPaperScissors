@@ -12,7 +12,12 @@ function playRound (playerSelection, computerSelection) {
 }
 
 const playerSelection = prompt("enter player choice").toLowerCase();  
-const computerSelection = getComputerChoice()
+const computerSelection = getComputerChoice();
+console.log(playRound(playerSelection, computerSelection));
 
+function game() {
+    for(let i = 0; i < 5; i++) {
+        playRound();
 
-
+    }
+}
