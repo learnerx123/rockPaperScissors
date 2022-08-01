@@ -3,7 +3,7 @@
 function getComputerChoice() {
     //    math.random(1,3)
     let numb = Math.floor(Math.random() * (4 - 1) + 1);
-    console.log(numb)
+    console.log(`computerChoice:${numb}`)
 
     return numb === 1 ? "rock"
         : numb === 2 ? "paper"
@@ -82,6 +82,12 @@ function game() {
         }
 
     }
+    // score board
+    console.log(
+        `computerScore: ${computerScore} 
+        playerScore: ${playerScore}`
+    )
+
     // Winner after 5 rounds
     let winner = playerScore > computerScore ? "player Wins"
         : playerScore === computerScore ? " its a tie" : "computer Wins";
