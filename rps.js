@@ -96,7 +96,6 @@ function game() {
 
 }
 
-game()
 function notAllowed(playerSelection) {
     switch (playerSelection) {
         case "rock":
@@ -119,3 +118,6 @@ function notAllowed(playerSelection) {
             return true;
     }
 }
+
+//lets start the game
+game()
